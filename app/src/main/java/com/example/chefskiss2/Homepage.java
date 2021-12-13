@@ -82,6 +82,12 @@ public class Homepage extends AppCompatActivity implements OnNavigationButtonCli
                         startActivity(intent);
                         finishAffinity();
                         break;
+                    case R.id.nav_search:
+                        Intent intent5 = new Intent(Homepage.this, Search.class);
+                        intent5.putExtra("account", loggedInAcct);
+                        startActivity(intent5);
+                        finishAffinity();
+                        break;
                     case R.id.nav_saved_recipes:
                         Intent intent1 = new Intent(Homepage.this, SavedRecipes.class);
                         intent1.putExtra("account", loggedInAcct);
